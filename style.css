@@ -1,0 +1,131 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #DB0007, #EF0107);
+    padding: 10px;
+    background: url('images/haha.jpeg')
+}
+
+.todo-app {
+    width: 100%;
+    max-width: 800px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.todo-app h2 {
+    color: #063672;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.todo-app h5 {
+    text-align: center;
+    margin-top: 50px;
+    color: #063672;
+}
+.todo-app img {
+    width: auto; 
+    height: 45px;
+    margin-right: 10px;
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #063672;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+    margin-top: 30px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    color: #fff;
+    font-size: 19px;
+    font-weight: 14px;
+}
+input::placeholder {
+    color: #fff; /* Ganti dengan warna yang diinginkan */
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #DB0007;
+    color: #fff;
+    font-size: 19px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+
+ul li{
+    list-style: none;
+    font-size: 17px;
+    padding:12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    color: #063672;
+}
+
+ul li::before{
+    content: '';
+    position:absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(images/radio.png);
+    background-size: cover;
+    background-position: center;
+    top: 8px;
+    left: 8px;
+}
+
+ul li.checked{
+    color:#DB0007;
+    text-decoration:line-through;
+}
+
+ul li.checked::before{
+    background-image: url(images/cross.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 10px;
+    top: 0px;
+    width: 80px;
+    height: 40px;
+    font-size: 17px;
+    color: #DB0007;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 15px;
+}
+
+ul li span:hover{
+    background: #DB0007;
+    color:white;
+}
